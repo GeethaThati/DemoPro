@@ -1,6 +1,5 @@
 package com.geetha.miniproject;
 
-import java.io.FileWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class Display implements source{
 		int flag=0;
 		Rows row = null;
 		
-		Iterator itr= list.iterator();
+		Iterator<Rows> itr= list.iterator();
 		while(itr.hasNext()) {
 			row = (Rows)itr.next();
 			SimpleDateFormat f=null;
@@ -70,7 +69,7 @@ public class Display implements source{
 		
 		Rows row = null;
 		int flag = 0;
-		Iterator itr= list.iterator();
+		Iterator<Rows> itr= list.iterator();
 		while(itr.hasNext()) {
 			row = (Rows) itr.next();
 			if(row.getCompany().equals(bank)) {
@@ -82,7 +81,7 @@ public class Display implements source{
 			}
 		}
 		if(flag == 0) 
-			System.out.println("There is no complaint for "+bank+" bank");
+			System.out.println("There is no complaint for "+ bank +" bank");
 	}
 
 	@Override
@@ -93,7 +92,7 @@ public class Display implements source{
 		
 		String cid=sc.next();
 		int flag=0;
-		Iterator it=list.iterator();
+		Iterator<Rows> it=list.iterator();
 		while(it.hasNext())
 		{
 			row=(Rows)it.next();
@@ -119,7 +118,7 @@ public class Display implements source{
 	public void getDataBasedOnNumberOfDaysToSlove(ArrayList<Rows> list) {
 
 		Rows r=null;
-		Iterator it=list.iterator();
+		Iterator<Rows> it=list.iterator();
 		while(it.hasNext())
 		{
 			r=(Rows)it.next();
@@ -168,7 +167,7 @@ public class Display implements source{
 		
 		Rows row=null;
 		int flag=0;
-		Iterator it=list.iterator();
+		Iterator<Rows> it=list.iterator();
 		while(it.hasNext())
 		{
 			row=(Rows)it.next();
@@ -194,7 +193,7 @@ public class Display implements source{
 		
 		Rows row=null;
 		int flag=0;
-		Iterator it=list.iterator();
+		Iterator<Rows> it=list.iterator();
 		while(it.hasNext())
 		{
 			row=(Rows)it.next();
@@ -209,6 +208,8 @@ public class Display implements source{
 		
 		if(flag==0)
 			System.out.println("No Complaint with Timely Response");
+		
+		System.out.println("haiiiiiiiiiiii");
 			
 	}
 
